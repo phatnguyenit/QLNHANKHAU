@@ -237,7 +237,7 @@
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbon.ShowQatLocationSelector = false;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1286, 54);
+            this.ribbon.Size = new System.Drawing.Size(1361, 54);
             this.ribbon.StatusBar = this.ribbonStatusBar1;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -574,14 +574,14 @@
             // btnDuLieu
             // 
             this.btnDuLieu.Caption = "Dữ liệu";
-            this.btnDuLieu.Enabled = false;
             this.btnDuLieu.Id = 92;
-            this.btnDuLieu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLinkContainerItem1.ImageOptions.Image")));
-            this.btnDuLieu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLinkContainerItem1.ImageOptions.LargeImage")));
+            this.btnDuLieu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDuLieu.ImageOptions.Image")));
+            this.btnDuLieu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDuLieu.ImageOptions.LargeImage")));
             this.btnDuLieu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10)});
             this.btnDuLieu.Name = "btnDuLieu";
+            this.btnDuLieu.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // barButtonItem9
             // 
@@ -590,6 +590,7 @@
             this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
             this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
             this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick_1);
             // 
             // barButtonItem10
             // 
@@ -634,10 +635,10 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.barNgaythang);
             this.ribbonStatusBar1.ItemLinks.Add(this.barTime);
             this.ribbonStatusBar1.ItemLinks.Add(this.btnDuLieu);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 640);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 718);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1286, 23);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1361, 23);
             // 
             // barButtonItem11
             // 
@@ -994,7 +995,7 @@
             this.acMenu.Name = "acMenu";
             this.acMenu.ScaleImages = DevExpress.Utils.DefaultBoolean.True;
             this.acMenu.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.acMenu.Size = new System.Drawing.Size(176, 586);
+            this.acMenu.Size = new System.Drawing.Size(176, 664);
             this.acMenu.TabIndex = 13;
             this.acMenu.Text = "accordionControl1";
             // 
@@ -1184,7 +1185,7 @@
             // 
             this.splitterControl1.Location = new System.Drawing.Point(176, 54);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(12, 586);
+            this.splitterControl1.Size = new System.Drawing.Size(12, 664);
             this.splitterControl1.TabIndex = 16;
             this.splitterControl1.TabStop = false;
             // 
@@ -1193,7 +1194,7 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 663);
+            this.ClientSize = new System.Drawing.Size(1361, 741);
             this.Controls.Add(this.splitterControl1);
             this.Controls.Add(this.acMenu);
             this.Controls.Add(this.ribbonStatusBar1);
@@ -1206,7 +1207,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "PHẦN MỀM QUẢN LÝ NHÂN KHẨU TỈNH";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmChuongTrinhChinh_FormClosing);
             this.Load += new System.EventHandler(this.frmChuongTrinhChinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();

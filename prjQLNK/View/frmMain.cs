@@ -121,7 +121,7 @@ namespace prjQLNK
                 LuuTKTableAdapters.QueriesTableAdapter q = new LuuTKTableAdapters.QueriesTableAdapter();
                 if (q.Login(DN.txtTaiKhoan.Text, DN.txtMatKhau.Text) == 1 && ThongTinDN.Truycap == true)
                 {
-                    btnDuLieu.Enabled = true;
+                    btnDuLieu.Visibility = BarItemVisibility.Always;
                     lblGioiThieu.Caption = ThongTinDN.QuyenHan + Control.ThongTinDN.Tencanbo;
                     btnDangNhap.Caption = "Đăng xuất";
                     btnDangNhap.LargeGlyph = Properties.Resources.Lock_Unlock_icon;
@@ -156,7 +156,7 @@ namespace prjQLNK
 
                     return;
                 }
-                btnDuLieu.Enabled = false;
+                btnDuLieu.Visibility = BarItemVisibility.Never;
                 btnDangNhap.Caption = "Đăng nhập";
                 btnDangNhap.LargeGlyph = Properties.Resources.Lock_Unlock_icon;
                 ribQLNK.Enabled = false;
@@ -177,7 +177,7 @@ namespace prjQLNK
             }
             else
             {
-                btnDuLieu.Enabled = false;
+                btnDuLieu.Visibility = BarItemVisibility.Never;
                 btnDangNhap.Caption = "Đăng nhập";
                 ThongTinDN.QuyenHan = "";
                 ThongTinDN.Quyenhan = 0;
@@ -545,6 +545,13 @@ namespace prjQLNK
             frmLicense fr = new frmLicense();
             fr.ShowDialog();
             SplashScreenManager.CloseDefaultWaitForm();
+        }
+
+        private void barButtonItem9_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            frmBackUp fr = new frmBackUp();
+            if (fr.ShowDialog() == DialogResult.OK)
+                alertControl1.Show(this, "Thành công", "Sao lưu thành công!");
         }
     }
 }

@@ -252,6 +252,9 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack">
+      <HintPath>C:\Users\PHATNGUYENIT\Desktop\Microsoft.WindowsAPICodePack\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
     <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -322,10 +325,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmNhapKhauInfo.cs">
+    <Compile Include="View\frmBackUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhapKhauInfo.Designer.cs">
+    <Compile Include="View\frmBackUp.Designer.cs">
+      <DependentUpon>frmBackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\frmNhapKhauInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UControl\frmNhapKhauInfo.Designer.cs">
       <DependentUpon>frmNhapKhauInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="ORMQLNKCode\AutoFormat.cs" />
@@ -621,7 +630,10 @@
     <Compile Include="UControl\frmThemCongDan.Designer.cs">
       <DependentUpon>frmThemCongDan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmNhapKhauInfo.resx">
+    <EmbeddedResource Include="View\frmBackUp.resx">
+      <DependentUpon>frmBackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\frmNhapKhauInfo.resx">
       <DependentUpon>frmNhapKhauInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\BcBKNKnull.resx">
